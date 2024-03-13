@@ -6,6 +6,12 @@ namespace haziallat_nevelo
 
         public void Repules()
         {
+            if(Energia < 40)
+            {
+                Console.WriteLine("Nincs elég energia a repüléshez!");
+                return;
+            }
+
             Hangulat += 30;
             Egeszseg += 15;
             Energia -= 40;

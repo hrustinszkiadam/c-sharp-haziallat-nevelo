@@ -65,12 +65,23 @@ namespace haziallat_nevelo
 
         public void EtelAdas()
         {
+            if(Ehesseg < 10) {
+                Console.WriteLine("Nem éhes!");
+                return;
+            }
+
             Ehesseg -= 10;
             Egeszseg += 5;
         }
 
         public void Jatek()
         {
+            if (Energia < 10)
+            {
+                Console.WriteLine("Nincs elég energia a játékhoz!");
+                return;
+            }
+
             Hangulat += 10;
             Energia -= 10;
             Ehesseg += 10;
@@ -78,12 +89,24 @@ namespace haziallat_nevelo
 
         public void Pihenes()
         {
+            if (Hangulat < 10)
+            {
+                Console.WriteLine("Nincs elég hangulat a pihenéshez!");
+                return;
+            }
+
             Energia += 10;
             Hangulat -= 10;
         }
 
         public void OrvoshozMegy()
         {
+            if(Hangulat < 10)
+            {
+                Console.WriteLine("Nincs elég hangulat az orvoshoz menethez!");
+                return;
+            }
+
             Egeszseg += 10;
             Hangulat -= 10;
         }
